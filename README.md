@@ -53,7 +53,7 @@ Antes:
 (valor, conversorMoeda) -> conversorMoeda.converter(valor);
 ```
 
-Agora:
+Depois:
 ```
 (@Nonnull var valor, @Nonnull var conversorMoeda) -> conversorMoeda.converter(valor);
 ```
@@ -64,7 +64,63 @@ Agora:
 
 ## Java 12 <a name="java12"></a>:heart:
 
-.....
+#### Métodos String (indent and transform)
+
+Indent: colocará uma identação no código com o tamanho de espaço definido por um número.
+```java
+String msg = "Hello\nWorld!".indent(3);
+```
+
+Transform: Podemos chaviar essas chamadas e retornar uma String transformada em novos valores, podemos usar como um 'concat' também.
+```java
+String msg = "Hello".transform(s -> s + ", World!").transform(String::toUpperCase);
+```
+
+#### Switch Expressions._[(JEP 325)](http://openjdk.java.net/jeps/325)_
+
+- Não precisamos mais utilizar a palavra _`break`_, podemos separar os valores por vírgula, 
+
+Antes:
+```java
+switch (day) {
+    case MONDAY:
+    case FRIDAY:
+    case SUNDAY:
+        System.out.println("A");
+        break;
+    case TUESDAY:
+        System.out.println("B");
+        break;
+    case THURSDAY:
+    case SATURDAY:
+        System.out.println("C");
+        break;
+    case WEDNESDAY:
+        System.out.println("D");
+        break;
+}
+```
+
+Depois:
+```java
+switch (day) {
+    case MONDAY, FRIDAY, SUNDAY -> System.out.println("A");
+    case TUESDAY                -> System.out.println("B");
+    case THURSDAY, SATURDAY     -> System.out.println("C");
+    case WEDNESDAY              -> System.out.println("D");
+}
+```
+
+Switch agora pode retornar valor também:
+```java
+private static String switchNew(Days day){
+    return switch (day) {
+        case MONDAY, FRIDAY, SUNDAY, TUESDAY  -> "A";
+        case THURSDAY, SATURDAY               -> "C";
+        default                               -> "D";
+    };
+}
+```
 
 ## Java 12 <a name="java12"></a>:heart:
 
