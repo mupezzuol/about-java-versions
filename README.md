@@ -1,4 +1,4 @@
-# Java versions and their main new for developers :heart_eyes:
+# Java versions and their main news for developers.:heart_eyes:
 
 Project used to know a little about what is best in Java versions.
 
@@ -15,16 +15,15 @@ Project used to know a little about what is best in Java versions.
 
 #### JavaDoc
 
-- Agora possui campo de buscas, caso você gere o javadoc do seu projeto, ou pegue um javadoc de terceiro, é possível realizar buscas.
+- Agora possui campo de busca, caso você gere o javadoc do seu projeto, ou pegue um javadoc de terceiro, é possível realizar buscas, facilitando os desenvolvedores ainda mais.
 
 #### JShell
 
-- possibilidade de executar comando java via terminal de maneira simples
+- Com _`JShell`_ temos possibilidade de executar comandos Java via terminal de maneira simples, não precisamos de tantos códigos para começarmos a executar comandos básicos em java.
 
 #### Jigsaw - Java Modularizado
 
-- Escrevendo código de maneira modular, de forma que eu posso escolher qual pacote do java vou usar em meu código,
-por padrão o Java vem com diversos pacotes, desde Strings, IO, etc... porém com Java modular, nós podemos escolher a dedo o que queremos usar. Isso faz com que seu pacote final seja bem menor do que de forma padrão.
+- Agora podemos escrever código de maneira modular, de forma que nós podemos escolher qual pacote do java usaremos em nosso código, por padrão o Java vem com diversos pacotes, desde Strings, IO, etc... porém com Java modular, nós podemos escolher o que queremos usar, dessa forma nosso pacote final seja bem menor e só com o que precisamos.
 
 ## Java 10 <a name="java10"></a>:heart:
 
