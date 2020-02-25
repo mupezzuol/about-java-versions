@@ -44,5 +44,5 @@ por padrão o Java vem com diversos pacotes, desde Strings, IO, etc... porém co
 
 ## References - Versions and Release Date <a name="references"></a> :link:
 
-- References: _Wikipedia: [Wikipedia](https://en.wikipedia.org/wiki/Java_version_history)._
+- References: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history). (2020-02-25)_ 
 ![Java Version](img/java-version.png)
