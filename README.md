@@ -46,7 +46,21 @@ public void example() {
 
 ## Java 11 <a name="java11"></a>:heart:
 
-.....
+#### Anotações de tipo em expressões lambda
+
+Antes:
+```
+(valor, conversorMoeda) -> conversorMoeda.converter(valor);
+```
+
+Agora:
+```
+(@Nonnull var valor, @Nonnull var conversorMoeda) -> conversorMoeda.converter(valor);
+```
+
+#### O cliente HTTP do Java ganha uma padronização
+
+- No Java 11, a API está consolidada, foi realizado até mesmo a troca do pacote _`jdk.incubator.http`_ por _`java.net.http`_, implementando um modelo não blocante de comunicação, semelhante ao utilizado pelo Nodejs. Além disso, a API também oferece suporte ao HTTP 1.1/2, o que a torna uma opção muito mais robusta em comparação a API URLConnection.
 
 ## Java 12 <a name="java12"></a>:heart:
 
