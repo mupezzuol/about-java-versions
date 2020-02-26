@@ -16,20 +16,20 @@ Project used to know a little about what is best in Java versions.
 
 #### JavaDoc
 
-- Agora possui campo de busca, caso você gere o javadoc do seu projeto, ou pegue um javadoc de terceiro, é possível realizar buscas, facilitando os desenvolvedores ainda mais.
+- Now it has a search field, if you generate your project's javadoc, or get a third-party javadoc, you can perform searches, making developers even easier.
 
 #### JShell
 
-- Com _`JShell`_ temos possibilidade de executar comandos Java via terminal de maneira simples, não precisamos de tantos códigos para começarmos a executar comandos básicos em java.
+- With _`JShell`_ we have the possibility to execute Java commands via terminal in a simple way, we don't need so much code to start executing basic commands in java.
 
-#### Jigsaw - Java Modularizado
+#### Jigsaw - Modularized Java
 
-- Agora podemos escrever código de maneira modular, de forma que nós podemos escolher qual pacote do java usaremos em nosso código, por padrão o Java vem com diversos pacotes, desde Strings, IO, etc... porém com Java modular, nós podemos escolher o que queremos usar, dessa forma nosso pacote final seja bem menor e só com o que precisamos. _[(Jigsaw Project)](https://openjdk.java.net/projects/jigsaw/)_
+- Now we can write code in a modular way, so that we can choose which java package we will use in our code, by default Java comes with several packages, from Strings, IO, etc ... however with modular Java, we can choose the that we want to use, that way our final package is much smaller and only with what we need. _[(Jigsaw Project)](https://openjdk.java.net/projects/jigsaw/)_
 
 ## Java 10 <a name="java10"></a>:heart:
 
-- Releases baseados em tempo._[(JEP 322)](http://openjdk.java.net/jeps/322)_
-- Inferência de tipos para variáveis _`locais`_._[(JEP 286)](http://openjdk.java.net/jeps/286)_
+- Time-based releases._[(JEP 322)](http://openjdk.java.net/jeps/322)_
+- Type inference for variables _`locais`_._[(JEP 286)](http://openjdk.java.net/jeps/286)_
 
 ```java
 public void example() {
@@ -47,41 +47,41 @@ public void example() {
 
 ## Java 11 <a name="java11"></a>:heart:
 
-#### Anotações de tipo em expressões lambda
+#### Type annotations in lambda expressions
 
-Antes:
+Before:
 ```
 (valor, conversorMoeda) -> conversorMoeda.converter(valor);
 ```
 
-Depois:
+After:
 ```
 (@Nonnull var valor, @Nonnull var conversorMoeda) -> conversorMoeda.converter(valor);
 ```
 
-#### O cliente HTTP do Java ganha uma padronização
+#### The Java HTTP client gains a standardization
 
-- No Java 11, a API está consolidada, foi realizado até mesmo a troca do pacote _`jdk.incubator.http`_ por _`java.net.http`_, implementando um modelo não blocante de comunicação, semelhante ao utilizado pelo Nodejs. Além disso, a API também oferece suporte ao HTTP 1.1/2, o que a torna uma opção muito mais robusta em comparação a API URLConnection.
+- In Java 11, the API is consolidated, even the exchange of the _`jdk.incubator.http`_ package by _`java.net.http`_ was carried out, implementing a non-blocking communication model, similar to that used by Nodejs . In addition, the API also supports HTTP 1.1 / 2, which makes it a much more robust option compared to the URLConnection API.
 
 ## Java 12 <a name="java12"></a>:heart:
 
-#### Métodos String (indent and transform)
+#### String Methods (indent and transform)
 
-Indent: colocará uma identação no código com o tamanho de espaço definido por um número.
+Indent: will place an indentation in the code with the space size defined by a number.
 ```java
 String msg = "Hello\nWorld!".indent(3);
 ```
 
-Transform: Podemos chaviar essas chamadas e retornar uma String transformada em novos valores, podemos usar como um 'concat' também.
+Transform: We can call these calls and return a String transformed into new values, we can use it as a 'concat' as well.
 ```java
 String msg = "Hello".transform(s -> s + ", World!").transform(String::toUpperCase);
 ```
 
 #### Switch Expressions. (preview)_[(JEP 325)](http://openjdk.java.net/jeps/325)_
 
-- Não precisamos mais utilizar a palavra _`break`_, podemos separar os valores por vírgula, 
+- We no longer need to use the word _`break`_, we can separate the values with a comma.
 
-Antes:
+Before:
 ```java
 switch (day) {
     case MONDAY:
@@ -102,7 +102,7 @@ switch (day) {
 }
 ```
 
-Depois:
+After:
 ```java
 switch (day) {
     case MONDAY, FRIDAY, SUNDAY -> System.out.println("A");
@@ -112,7 +112,7 @@ switch (day) {
 }
 ```
 
-Switch agora pode retornar valor também:
+Switch can now return value too:
 ```java
 private static String switchNew(Days day){
     return switch (day) {
