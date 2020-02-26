@@ -9,6 +9,7 @@ Project used to know a little about what is best in Java versions.
 - [Java 11](#java11)
 - [Java 12](#java12)
 - [Java 13](#java13)
+- [Java 14](#java14)
 - [References](#references)
 
 ## Java 9 <a name="java9"></a>:heart:
@@ -76,7 +77,7 @@ Transform: Podemos chaviar essas chamadas e retornar uma String transformada em 
 String msg = "Hello".transform(s -> s + ", World!").transform(String::toUpperCase);
 ```
 
-#### Switch Expressions._[(JEP 325)](http://openjdk.java.net/jeps/325)_
+#### Switch Expressions. (preview)_[(JEP 325)](http://openjdk.java.net/jeps/325)_
 
 - Não precisamos mais utilizar a palavra _`break`_, podemos separar os valores por vírgula, 
 
@@ -122,9 +123,14 @@ private static String switchNew(Days day){
 }
 ```
 
-## Java 12 <a name="java12"></a>:heart:
+## Java 13 <a name="java13"></a>:heart:
 
-.....
+- Switch Expressions functionality continues in preview.[(JEP 325)](http://openjdk.java.net/jeps/325)_
+- Text Blocks (Preview).[(JEP 355)](http://openjdk.java.net/jeps/355)_
+
+## Java 14 <a name="java14"></a>:heart:
+
+- In progress...
 
 ## References - Versions and Release Date <a name="references"></a> :link:
 
