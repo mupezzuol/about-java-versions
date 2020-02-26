@@ -125,8 +125,8 @@ private static String switchNew(Days day){
 
 ## Java 13 <a name="java13"></a>:heart:
 
-- Switch Expressions functionality continues in preview.[(JEP 325)](http://openjdk.java.net/jeps/325)_
-- Text Blocks (Preview).[(JEP 355)](http://openjdk.java.net/jeps/355)_
+- Switch Expressions functionality continues in preview._[(JEP 325)](http://openjdk.java.net/jeps/325)_
+- Text Blocks (Preview)._[(JEP 355)](http://openjdk.java.net/jeps/355)_
 
 ## Java 14 <a name="java14"></a>:heart:
 
