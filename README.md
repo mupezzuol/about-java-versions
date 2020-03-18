@@ -130,7 +130,91 @@ private static String switchNew(Days day){
 
 ## Java 14 <a name="java14"></a>:heart:
 
-- In progress...
+- Switch Expressions Release._[(JEP 361)](http://openjdk.java.net/jeps/361)_
+- Text Blocks Release. _[(JEP 368)](http://openjdk.java.net/jeps/368)_
+- Helpful NullPointerExceptions._[(JEP 358)](http://openjdk.java.net/jeps/358)_
+- Pattern Matching for instanceof (Preview)._[(JEP 305)](http://openjdk.java.net/jeps/305)_
+
+Before:
+```java
+if (obj instanceof String) {
+    String s = (String) obj;
+    // use s
+}
+```
+
+After:
+```java
+if (obj instanceof String s) {
+    // now will you use 's' here
+}
+```
+
+#### Records
+
+- Records (Preview)._[(JEP 359)](http://openjdk.java.net/jeps/359)_
+
+The record is equivalent to a class with:
+
+- A private and final attribute for each informed argument;
+- A public constructor that uses all arguments;
+- Getters;
+- toString;
+- equals and hashCode.
+
+To enable this preview, use the following flag:
+```
+javac --enable-preview --release 14 BankTransaction.java
+```
+
+Before:
+```java
+public class ExempleRecord {
+    private final int x;
+    private final int y;
+    public Ponto(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public int getX() {
+        return x;
+    }
+    public void setX(int x) {
+        this.x = x;
+    }
+    public int getY() {
+        return y;
+    }
+    public void setY(int y) {
+        this.y = y;
+    }
+    @Override
+    public String toString() {
+        return "Ponto{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ponto ponto = (Ponto) o;
+        return x == ponto.x &&
+                y == ponto.y;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+}
+```
+
+After:
+```java
+record ExempleRecord(int x, int y) { }
+}
+```
 
 ## References - Versions and Release Date <a name="references"></a> :link:
 
