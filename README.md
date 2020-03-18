@@ -213,7 +213,6 @@ public class ExempleRecord {
 After:
 ```java
 record ExempleRecord(int x, int y) { }
-}
 ```
 
 ## References - Versions and Release Date <a name="references"></a> :link:
