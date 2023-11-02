@@ -372,3 +372,10 @@ public static String getLeagueDescription (FootballLeague league) {
 ## Java 20 <a name="java20"></a>:heart:
 
 ## Java 21 LTS <a name="java21"></a>:heart:
+
+- String Templates (Preview) _[(JEP 430)](https://openjdk.org/jeps/430)_
+- Sequenced Collections _[(JEP 431)](https://openjdk.org/jeps/431)_
+- Record Patterns _[(JEP 440)](https://openjdk.org/jeps/440)_
+- Pattern Matching for switch _[(JEP 441)](https://openjdk.org/jeps/441)_
+- Unnamed Patterns and Variables (Preview) _[(JEP 443)](https://openjdk.org/jeps/443)_
+- Unnamed Classes and Instance Main Methods (Preview) _[(JEP 445)](https://openjdk.org/jeps/445)_
