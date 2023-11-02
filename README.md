@@ -337,6 +337,34 @@ public static void calculateArea (GeometricFigure figure) {
 
 ## Java 17 LTS <a name="java17"></a>:heart:
 
+- Pattern Matching for Switch
+- Sealed Classes
+- Removals and Deprecation
+- Strongly Encapstulate JDK internals
+
+After:
+```java
+public static String getResult (Object value) {
+    return switch(value){
+        case String s ->  "A String of Length: " + s.length();
+        case List list && list.size() > 1000 ->  "A large list of size: " + list.size();
+        case List list ->  "A list of size: " + list.size();
+        case Map map ->  "A map(key,value) of size: " + map.size();
+        case Map map ->  "A set, unique elements: " + set.size();
+        default -> "Unknown data structure!";
+    }
+}
+
+// Other Example
+public static String getLeagueDescription (FootballLeague league) {
+    return switch(value){
+        case null -> "Invalid league";
+        case LA_LIGA -> "Spanish Football League";
+        case PL -> "Premiere League";
+    }
+}
+```
+
 ## Java 18 <a name="java18"></a>:heart:
 
 ## Java 19 <a name="java19"></a>:heart:
