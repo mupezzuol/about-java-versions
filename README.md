@@ -367,6 +367,14 @@ public static String getLeagueDescription (FootballLeague league) {
 
 ## Java 18 <a name="java18"></a>:heart:
 
+- Simple web server _[(JEP 430)](https://openjdk.org/jeps/408)_
+- UTF-8 by default _[(JEP 400)](https://openjdk.org/jeps/400)_
+- Core Reflection
+- Vector API _[(JEP 430)](https://openjdk.org/jeps/417)_
+- Foreign Function & Memory API (Second Incubator) _[(JEP 419)](https://openjdk.org/jeps/419)_
+- Javadoc code snippets
+- Deprecating Finalization for Removal
+
 ## Java 19 <a name="java19"></a>:heart:
 
 ## Java 20 <a name="java20"></a>:heart:
