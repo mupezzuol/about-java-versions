@@ -238,5 +238,5 @@ record ExempleRecord(int x, int y) { }
 
 ## References - Versions and Release Date <a name="references"></a> :link:
 
-- References: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history). synced 2023-11-02_ 
+References Synced 2023-11-02: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history)._ 
 ![Java Version](img/java-version.png)
