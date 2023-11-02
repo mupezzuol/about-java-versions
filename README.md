@@ -377,6 +377,13 @@ public static String getLeagueDescription (FootballLeague league) {
 
 ## Java 19 <a name="java19"></a>:heart:
 
+- Record Patterns (Preview) _[(JEP 405)](https://openjdk.org/jeps/405)_
+- Pattern Matching for Switch (Third Preview) _[(JEP 427)](https://openjdk.org/jeps/427)_
+- Foreign Function e Memory API (Preview) _[(JEP 424)](https://openjdk.org/jeps/424)_
+- Vector API (Fourth Incubator) _[(JEP 426)](https://openjdk.org/jeps/426)_
+- Virtual Threads (Preview) _[(JEP 425)](https://openjdk.org/jeps/425)_
+- Structured Concurrency (Incubator) _[(JEP 428)](https://openjdk.org/jeps/428)_
+
 ## Java 20 <a name="java20"></a>:heart:
 
 ## Java 21 LTS <a name="java21"></a>:heart:
