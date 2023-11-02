@@ -10,6 +10,13 @@ Project used to know a little about what is best in Java versions.
 - [Java 12](#java12)
 - [Java 13](#java13)
 - [Java 14](#java14)
+- [Java 15](#java15)
+- [Java 16](#java16)
+- [Java 17](#java17)
+- [Java 18](#java18)
+- [Java 19](#java19)
+- [Java 20](#java20)
+- [Java 21](#java21)
 - [References](#references)
 
 ## Java 9 <a name="java9"></a>:heart:
@@ -215,7 +222,21 @@ After:
 record ExempleRecord(int x, int y) { }
 ```
 
+## Java 15 <a name="java15"></a>:heart:
+
+## Java 16 <a name="java16"></a>:heart:
+
+## Java 17 <a name="java17"></a>:heart:
+
+## Java 18 <a name="java18"></a>:heart:
+
+## Java 19 <a name="java19"></a>:heart:
+
+## Java 20 <a name="java20"></a>:heart:
+
+## Java 21 <a name="java21"></a>:heart:
+
 ## References - Versions and Release Date <a name="references"></a> :link:
 
-- References: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history). (2020-02-25)_ 
+- References: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history). synced 2023-11-02_ 
 ![Java Version](img/java-version.png)
