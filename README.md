@@ -4,6 +4,7 @@ Project used to know a little about what is best in Java versions.
 
 ## Index :pushpin:
 
+- [Java Version List](#java-version-list)
 - [Java 9](#java9)
 - [Java 10](#java10)
 - [Java 11](#java11)
@@ -17,7 +18,11 @@ Project used to know a little about what is best in Java versions.
 - [Java 19](#java19)
 - [Java 20](#java20)
 - [Java 21](#java21)
-- [References](#references)
+
+## Java Version List <a name="java-version-list"></a> :link:
+
+References Synced 2023-11-02: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history)._ 
+![Java Version](img/java-version.png)
 
 ## Java 9 <a name="java9"></a>:heart:
 
@@ -235,8 +240,3 @@ record ExempleRecord(int x, int y) { }
 ## Java 20 <a name="java20"></a>:heart:
 
 ## Java 21 <a name="java21"></a>:heart:
-
-## References - Versions and Release Date <a name="references"></a> :link:
-
-References Synced 2023-11-02: _[Wikipedia](https://en.wikipedia.org/wiki/Java_version_history)._ 
-![Java Version](img/java-version.png)
