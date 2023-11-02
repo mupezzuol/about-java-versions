@@ -41,7 +41,7 @@ References Synced 2023-11-02: _[Wikipedia](https://en.wikipedia.org/wiki/Java_ve
 ## Java 10 <a name="java10"></a>:heart:
 
 - Time-based releases._[(JEP 322)](http://openjdk.java.net/jeps/322)_
-- Type inference for variables _`locais`_._[(JEP 286)](http://openjdk.java.net/jeps/286)_
+- Type inference for variables _`locals`_._[(JEP 286)](http://openjdk.java.net/jeps/286)_
 
 ```java
 public void example() {
@@ -57,7 +57,7 @@ public void example() {
 }
 ```
 
-## Java 11 <a name="java11"></a>:heart:
+## Java 11 LTS <a name="java11"></a>:heart:
 
 #### Type annotations in lambda expressions
 
@@ -173,6 +173,7 @@ The record is equivalent to a class with:
 - Getters;
 - toString;
 - equals and hashCode.
+- We can't use it for Hibernate/JPA, because those lib need to have empty constructors and methods setters
 
 To enable this preview, use the following flag:
 ```
@@ -227,11 +228,114 @@ After:
 record ExempleRecord(int x, int y) { }
 ```
 
+Other Example:
+```java
+public record Product(Long id, String name, String description) implements Serializable {
+    public static int CONT = 0;
+    public void myMethod () {}
+}
+```
+
 ## Java 15 <a name="java15"></a>:heart:
+
+- Sealed Classes (Preview) _[(JEP 360)](https://openjdk.org/jeps/360)_
+- Pattern Matching for instanceof (Second Preview) _[(JEP 375)](https://openjdk.org/jeps/375)_
+- Text Blocks _[(JEP 378)](https://openjdk.org/jeps/378)_
+- Records (Second Preview) _[(JEP 384)](https://openjdk.org/jeps/384)_
+    - We can declare 'records' in the method directly
 
 ## Java 16 <a name="java16"></a>:heart:
 
-## Java 17 <a name="java17"></a>:heart:
+- Pattern Matching for instanceof _[(JEP 394)](https://openjdk.org/jeps/394)_
+- Records _[(JEP 395)](https://openjdk.org/jeps/395)_
+- Sealed Classes (Second Preview) _[(JEP 397)](https://openjdk.org/jeps/397)_
+
+Pattern Matching for instanceof example:
+
+Before:
+```java
+public static void patternMatching (Object num) {
+    if (num instanceof Integer) {
+        Integer n = (Integer) num;
+        System.out.printin (n);
+    }
+}
+```
+
+After:
+```java
+public static void patternMatching (Object num) {
+    if (num instanceof Integer n) {
+        System.out.printin (n);
+    }
+}
+// Other Example (must be used just with &&)
+public static void patternMatching (Object num) {
+    if (num instanceof Integer n && n > 0) {
+        System.out.printin (n);
+    }
+}
+```
+
+Sealed Classes example:
+```java
+// This 'sealed' means: I seal the classes and declare which child classes will be able to extend it, only the declared classes can be extended, I seal and lock this class, no other will extend it, only those that are within the "permits"
+public sealed abstract class GeometricFigure permits Square, Circle {
+    
+    protected String colour;
+    
+    public abstract double calculateArea();
+    
+    public String getColour () {
+        return colour:
+    }
+    public void setColour (String colour) {
+        this.colour
+    }
+}
+
+// This 'final' means: cannot be extended
+public final class Square extends GeometricFigure {
+    
+    protected Double side;
+    
+    public String getSide () {
+        return side:
+    }
+
+    @Override
+    public double calculateArea() {
+        return 0;
+    }
+}
+
+// This 'non-sealed' means: it is not sealed, that is, other classes can extend this class and use it
+public non-sealed class Circle extends GeometricFigure {
+    
+    protected Double radius;
+    
+    public String getRadius () {
+        return radius:
+    }
+
+    @Override
+    public double calculateArea() {
+        return 0;
+    }
+}
+
+// Using these classes above
+public static void calculateArea (GeometricFigure figure) {
+    if (figure instanceof Square square) {
+        return square.getSide() * square.getSide();
+    }
+    if (figure instanceof Circle circle) {
+        return circle.getRadius() * circle.getRadius() * Math.PI;
+    }
+}
+```
+
+## Java 17 LTS <a name="java17"></a>:heart:
 
 ## Java 18 <a name="java18"></a>:heart:
 
@@ -239,4 +343,4 @@ record ExempleRecord(int x, int y) { }
 
 ## Java 20 <a name="java20"></a>:heart:
 
-## Java 21 <a name="java21"></a>:heart:
+## Java 21 LTS <a name="java21"></a>:heart:
